@@ -1,0 +1,24 @@
+body{
+    background-image: url('/images/desktop.png');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+ 
+
+    }
+
+h1.heading{
+    font-family: "Abhaya Libre";
+    text-align: center;
+    margin-top: 130px;
+    margin-bottom:130px;
+    color: black;
+}
+
+p.plain{
+    text-align: center;
+    font-family: "Indie Flower";
+    font-size: 1.5rem;
+    margin-bottom: 100px;
+}
