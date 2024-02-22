@@ -40,7 +40,7 @@ function App(){
   <input className="col-2"></input> */}
 
 
-      <select className="col-2 me-2"  value={day} onChange={(e) => setDay(e.target.value)}>
+      <select className=" text col-2 me-5 pt-2 pb-2 "  value={day} onChange={(e) => setDay(e.target.value)}>
         <option value="">Select Day</option>
         {days.map((d) => (
           <option key={d} value={d}>{d}</option>
@@ -49,15 +49,15 @@ function App(){
       
 
     
-      <select className="col-4 me-2"value={month} onChange={(e) => setMonth(e.target.value)}>
-        <option value="">Select Month</option>
+      <select className=" text col-4 me-5"value={month} onChange={(e) => setMonth(e.target.value)}>
+        <option  value="">Select Month</option>
         {months.map((m, index) => (
           <option key={index + 1} value={index + 1}>{m}</option>
         ))}
       </select>
 
    
-      <select className="col-2 me-2" value={year} onChange={(e) => setYear(e.target.value)}>
+      <select className="text col-2 me-2" value={year} onChange={(e) => setYear(e.target.value)}>
         <option value="">Select Year</option>
         {years.map((y) => (
           <option key={y} value={y}>{y}</option>
@@ -66,7 +66,7 @@ function App(){
 
   </div>
   </div>
-  <button className="check d-block m-auto mt-5 btn "  onClick = {handleClick}>check</button>
+  <button className="check d-block m-auto mt-5 btn mb-3 "  onClick = {handleClick}>check</button>
   <div className="couple-image m-auto">
     <img className="img-fluid w-100" src="/images/para.png" alt="para"></img>
   </div>
@@ -77,9 +77,12 @@ function App(){
   <img className="img-fluid w-100" src="/images/letter.png"></img>
   </div>
   <p className="plain">Your soulmate birthday is:</p>
-  <div className="circle"></div>
-  <div className="circle-blue"></div>
-  <h1 className="randomText border">{randomD} {randomM} </h1>
+
+  <div class="sign">
+      <span class="fast-flicker">{randomD}</span> 
+       <span class="flicker">{randomM}</span>
+    </div>
+
   </div>
 };
 

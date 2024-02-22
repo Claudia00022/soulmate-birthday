@@ -1,123 +1,261 @@
-body{
-    
-    /* margin: 0; */
-    /* padding: 0; */
-    /* box-sizing: border-box; */
-    background-image: url('/images/desktop.png');
-    height: 100vh;
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    /* overflow: hidden; */
- 
-
-    }
-
- 
-
-h1.heading{
-    font-family: "Abhaya Libre";
-    text-align: center;
-    padding-top: 80px;
-    padding-bottom:60px;
-    color: black;
+body {
+  background-image: url("/images/desktop.png");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-p.plain{
-    text-align: center;
-    font-family: "Indie Flower";
-    font-size: 1.5rem;
-    margin-bottom: 60px;
+h1.heading {
+  font-family: "Abhaya Libre";
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 60px;
+  color: rgb(87, 85, 85);
 }
 
-div.couple-image{
-    width: 320px;
-    height: 230px;
+p.plain {
+  text-align: center;
+  font-family: "Indie Flower";
+  font-size: 1.5rem;
+  margin-bottom: 80px;
+  color: rgb(87, 85, 85);
+}
+select.text {
+  font-family: "Indie Flower";
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.8px solid rgb(135, 132, 132);
+
+  font-size: 18px;
+  width: 180px;
+  color: rgb(87, 85, 85);
 }
 
-div.eclipse-left{
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
+div.couple-image {
+  width: 320px;
+  height: 230px;
 }
 
-div.letter{
-    position: absolute;
-    bottom: 0;
-    right: 0;
+div.eclipse-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
 }
 
-button.check{
-    width: 130px;
-    background-color: rgba(244, 124, 124, 0.6 );
-    font-family: "Indie Flower";
-    font-size: 18px;
-    color: black;
-    border-radius: 40px;
+div.letter {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
-h1.randomText{
-    
-    color: hsl(0, 0%, 0%);
-    text-align: center;
-    font-family: "Abhaya Libre";
-    letter-spacing: 7px;
-    overflow: hidden;
-    border-right: 2px solid hsl(0, 0%, 80%);
-    white-space: nowrap;
-    animation: typewriter 4s steps(44) 1s 1 normal both,
-      blinkTextCursor 500ms infinite;
+button.check {
+  width: 130px;
+  background-color: rgba(255, 101, 189, 0.7);
+  font-family: "Indie Flower";
+  font-size: 18px;
+  color: #ffe6ff;
+  font-weight: bold;
+  border-radius: 40px;
+  margin-bottom: 60px;
 }
 
-@keyframes typewriter {
-    from {
-      width: 0;
-    }
-    to {
-      width: 710px;
-    }
+.sign {
+  width: 300px;
+  margin: auto;
+  text-align: center;
+ letter-spacing: 2;
+ font-family: "Indie Flower";
+  text-transform: uppercase;
+  font-size: 3em;
+  color: #ffe6ff;
+  font-weight: bold;
+  text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+    -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+    0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+  animation: shine 2s forwards, flicker 3s infinite;
+}
+.sign span {
+  padding-right: 20px;
+}
+
+@keyframes blink {
+  0%,
+  22%,
+  36%,
+  75% {
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+      -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+      0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+  }
+  28%,
+  33% {
+    color: #ff65bd;
+    text-shadow: none;
+  }
+  82%,
+  97% {
+    color: #ff2483;
+    text-shadow: none;
+  }
+}
+
+.flicker {
+  animation: shine 2s forwards, blink 3s 2s infinite;
+}
+
+.fast-flicker {
+  animation: shine 2s forwards, blink 10s 1s infinite;
+}
+
+@keyframes shine {
+  0% {
+    color: #6b1839;
+    text-shadow: none;
+  }
+  100% {
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+      -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+      0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+  }
+}
+
+@keyframes flicker {
+  from {
+    opacity: 1;
   }
 
-  @keyframes blinkTextCursor {
-    from {
-      border-right-color: hsl(0, 0%, 80%);
-    }
-    to {
-      border-right-color: transparent;
-    }
+  4% {
+    opacity: 0.9;
   }
 
-  .circle{
-    position: absolute;
-    bottom: 40px;
-    /* left: 40%; */
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-    background-color: red;
-    animation: hide  3s ease-in 1s infinite reverse both running slidein;
-
-
+  6% {
+    opacity: 0.85;
   }
 
-  .circle-blue{
-    position: absolute;
-    bottom: 40px;
-    right: 40%;
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-    background-color: blue;
+  8% {
+    opacity: 0.95;
   }
 
-
-  @keyframes hide {
-    from {
-      left: 0
-    }
-    to {
-      left: 40%;
-    }
+  10% {
+    opacity: 0.9;
   }
+
+  11% {
+    opacity: 0.922;
+  }
+
+  12% {
+    opacity: 0.9;
+  }
+
+  14% {
+    opacity: 0.95;
+  }
+
+  16% {
+    opacity: 0.98;
+  }
+
+  17% {
+    opacity: 0.9;
+  }
+
+  19% {
+    opacity: 0.93;
+  }
+
+  20% {
+    opacity: 0.99;
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  26% {
+    opacity: 0.94;
+  }
+
+  28% {
+    opacity: 0.98;
+  }
+
+  37% {
+    opacity: 0.93;
+  }
+
+  38% {
+    opacity: 0.5;
+  }
+
+  39% {
+    opacity: 0.96;
+  }
+
+  42% {
+    opacity: 1;
+  }
+
+  44% {
+    opacity: 0.97;
+  }
+
+  46% {
+    opacity: 0.94;
+  }
+
+  56% {
+    opacity: 0.9;
+  }
+
+  58% {
+    opacity: 0.9;
+  }
+
+  60% {
+    opacity: 0.99;
+  }
+
+  68% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.9;
+  }
+
+  72% {
+    opacity: 0.95;
+  }
+
+  93% {
+    opacity: 0.93;
+  }
+
+  95% {
+    opacity: 0.95;
+  }
+
+  97% {
+    opacity: 0.93;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 575px) {
+  div.eclipse-left {
+    display: none;
+  }
+
+  div.letter {
+    display: none;
+  }
+}
