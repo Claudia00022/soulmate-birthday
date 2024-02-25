@@ -1,3 +1,7 @@
+
+
+
+
 # Soulmate Birthday
 Soulmate Birthday App is funny aplication where you can check your soulmate birth day. Just enter your own date of birth.
 
@@ -28,3 +32,6 @@ Soulmate Birthday App is funny aplication where you can check your soulmate birt
 - Web-vitals
 
 ## What the app looks like
+
+
+https://github.com/Claudia00022/soulmate-birthday/assets/142623403/7c2d23e9-bc9d-4a0f-9ebb-fd1b874346a6
